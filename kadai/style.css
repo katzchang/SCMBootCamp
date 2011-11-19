@@ -6,3 +6,7 @@
   background-color: #8484ee;
   padding: 0.1em;
 }
+
+pre {
+ border: solid 1px #000000;
+}
