@@ -27,6 +27,19 @@ git checkout master<br />
 git reset --hard hoge<br />
 git push</p>
 
+<h3>git rebase origin/master がconflictした場合</h3>
+
+<p>衝突ファイルを編集、解消し、addし、rebase --continueする。例えばindex.htmlが衝突した場合、良い感じに編集し、</p>
+<p class="command">git add index.html<br />
+git rebase --continue</p>
+
+<h3>git push に失敗した場合</h3>
+
+<p>masterをorigin/masterにrebaseし、再度pushを試みる。</p>
+<p class="command">git rebase origin/master<br />
+git push</p>
+<p>git rebase origin/masterがconflictした場合は、上記と同じ操作をする。</p>
+
 <!--
 <h2>上司「これを作ってる途中だけど、やっぱりアレを先に作って」</h2>
 TODO
