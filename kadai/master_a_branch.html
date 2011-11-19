@@ -13,11 +13,17 @@
 <h2>ブランチの基本</h2>
 <p class="command">git checkout -b hoge</p>
 <p>今のブランチ（たとえばmaster）を基に新たなブランチ「hoge」を作りつつ、作業スペースを移す。</p>
-<p class="command">git add .; git commit -m "…"</p>
+<p class="command">git add .<br />git commit -m "…"</p>
 <p>hogeブランチに、作業のコミットをしていく…。</p>
-<p class="command">git checkout master<br />
-git merge hoge</p>
+<p class="command">git checkout master<br />git merge hoge</p>
 <p>masterブランチに、hogeブランチをマージする。</p>
+
+<h2>Fast Forword Mergeを使う</h2>
+<p>新たなブランチ「hoge」を作りつつ、作業スペースを移し、作業のコミットをしていくところまでは同じだが、masterにマージするときにrebaseを行い、トピックブランチでのコミットを、トピックブランチでの作業中にmasterに対してコミットされた更新の上にかぶせたようにする。つまり、masterからの分岐地点を切り替える。文字で説明するのは難しい。</p>
+<p>hogeブランチにて、</p>
+<p class="command">git rebase master</p>
+<p>その後、masterに切り替えて、hogeをマージ</p>
+<p class="command">git checkout master<br />git merge hoge</p>
 
 <!--
 <h2>上司「これを作ってる途中だけど、やっぱりアレを先に作って」</h2>
