@@ -12,11 +12,14 @@
   </style>
 </head>
 <body>
-<h1>git 逆引きレシピ</h1>
-<p>#scmbc の課題として作った、gitの逆引きレシピです。</p>
-<ul>
-<li><a href="upload_changes.html">修正をアップするには？</a></li>
-<li><a href="find_modifiedfiles.html">修正したファイルを調べるには？</a></li>
-</ul>
+<h1>リポジトリからファイルを取得するには？</h1>
+<p>最新のソースコードを取得する</p>
+<p>前提：自分の作業環境(リポジトリ)がない</p>
+<p>コマンド：git clone xxxxx</p>
+
+<p>前提：共有リポジトリ（origin）からcloneされている</p>
+<p>コマンド：git pull</p>
+<p>備考：.git/configに記載されている複製元リポジトリURL([remote "origin"]内のurl)を用いてファイルを取得する。</p>
+
 </body>
 </html>
