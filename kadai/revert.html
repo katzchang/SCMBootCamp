@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />  
+  <title>ローカルのコミットを捨てるには？ - git 逆引きレシピ</title>
+</head>
+<body>
+<h1>ローカルのコミットを捨てるには？</h1>
+<p>add/commitしたけど、やっぱりoriginに戻したい</p>
+<p>前提：ローカルで修正をコミットしている</p>
+<p>origin から FETCH_HEAD をとってきて上書きする </p>
+<p class="command">git checkout FETCH_HEAD -- hoge.html</p>
+<p>備考：$ git checkout F ← ここまで打ってTAB押すと補完してくれます。 </p>
+</body>
+</html>
