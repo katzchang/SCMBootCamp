@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />  
+  <title>ブランチを使いこなす - git 逆引きレシピ</title>
+</head>
+<body>
+<h1>ブランチを使いこなす</h1>
+<p>作業が錯綜する場合、つまり「これを作ってる途中だけど、やっぱりアレを先に作って」とか言われそうな場合なんかは、特に<em>ブランチ</em>を使うといいらしいぞ。</p>
+
+<h2>ブランチの基本</h2>
+<p class="command">git checkout -b hoge</p>
+<p>今のブランチ（たとえばmaster）を基に新たなブランチ「hoge」を作りつつ、作業スペースを移す。</p>
+<p class="command">git add .; git commit -m "…"</p>
+<p>hogeブランチに、作業のコミットをしていく…。</p>
+<p class="command">git checkout master<br />
+git merge hoge</p>
+<p>masterブランチに、hogeブランチをマージする。</p>
+
+<!--
+<h2>上司「これを作ってる途中だけど、やっぱりアレを先に作って」</h2>
+TODO
+-->
+
+</body>
+</html>
