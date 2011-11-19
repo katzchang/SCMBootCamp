@@ -20,6 +20,11 @@
 
 <h2>Fast Forword Mergeを使う</h2>
 <p>新たなブランチ「hoge」を作りつつ、作業スペースを移し、作業のコミットをしていくところまでは同じだが、masterにマージするときにrebaseを行い、トピックブランチでのコミットを、トピックブランチでの作業中にmasterに対してコミットされた更新の上にかぶせたようにする。つまり、masterからの分岐地点を切り替える。文字で説明するのは難しい。</p>
+<p><b>何となくな図：</b></p>
+<p>1. ブランチで作業を進めて・・・</p>
+<p><img src="img/branch1.png" width="20%"></p>
+<p>2. rebaseでmasterへブランチの変更を反映！</p>
+<p><img src="img/branch2.png" width="30%"></p>
 <p>hogeブランチでの作業が終わったら、masterをfetchして、更新を取る。</p>
 <p class="command">git checkout master</p>
 <p class="command">git fetch origin master</p>
