@@ -19,23 +19,26 @@
 <p>masterブランチに、hogeブランチをマージする。</p>
 
 <h2>Fast Forword Mergeを使う</h2>
-<p>新たなブランチ「hoge」を作りつつ、作業スペースを移し、作業のコミットをしていくところまでは同じだが、masterにマージするときにrebaseを行い、トピックブランチでのコミットを、トピックブランチでの作業中にmasterに対してコミットされた更新の上にかぶせたようにする。つまり、masterからの分岐地点を切り替える。文字で説明するのは難しい。</p>
-<p>hogeブランチでの作業が終わったら、masterをfetchして、更新を取る。</p>
-<p class="command">git checkout master</p>
-<p class="command">git fetch origin master</p>
-<p>その後、hogeブランチの分岐地点を切り替える</p>
-<p class="command">git checkout hoge</p>
-<p class="command">git rebase master</p>
-<p>その後、masterに切り替えて、hogeをマージ</p>
-<p class="command">git checkout master<br />git merge hoge</p>
-<p>で、push</p>
-<p class="command">git push</p>
+<p>新たなブランチ「hoge」を作りつつ、作業スペースを移し、作業のコミットをしていくところまでは同じ。その後、originの更新を取り込んでrebase、masterの位置を替えてpushする。</p>
+<p class="command">
+git remote update<br />
+git rebase origin/master<br />
+git checkout master<br />
+git reset --hard hoge<br />
+git push</p>
 
-<h3>rebaseがconflictした場合</h3>
+<h3>git rebase origin/master がconflictした場合</h3>
 
 <p>衝突ファイルを編集、解消し、addし、rebase --continueする。例えばindex.htmlが衝突した場合、良い感じに編集し、</p>
 <p class="command">git add index.html<br />
 git rebase --continue</p>
+
+<h3>git push に失敗した場合</h3>
+
+<p>masterをorigin/masterにrebaseし、再度pushを試みる。</p>
+<p class="command">git rebase origin/master<br />
+git push</p>
+<p>git rebase origin/masterがconflictした場合は、上記と同じ操作をする。</p>
 
 <!--
 <h2>上司「これを作ってる途中だけど、やっぱりアレを先に作って」</h2>
