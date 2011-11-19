@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />  
+  <title>gitの操作をフックする - git 逆引きレシピ</title>
+</head>
+<body>
+<h1>gitの操作をフックする</h1>
+<p>$GIT_DIR/hooks以下にタイミング（操作）ごとのスクリプトが準備されているので、それを書き換えて利用する。</p>
+<p>サンプルは基本はshで書かれていて、一部perlのものもある。好きなスクリプト言語で実装して良い。</p>
+<ul>
+<li>applypatch-msg</li>
+<li>commit-msg</li>
+<li>post-commit</li>
+<li>post-receive</li>
+<li>post-update</li>
+<li>pre-applypatch</li>
+<li>pre-commit</li>
+<li>pre-rebase</li>
+<li>prepare-commit-msg</li>
+<li>update</li>
+</ul>
+<p></p>
+<p>参考：<a href="http://schacon.github.com/git/githooks.html" target="_blank">http://schacon.github.com/git/githooks.html</a> ／ <a href="http://progit.org/book/ja/ch7-3.html" target="_blank">http://progit.org/book/ja/ch7-3.html</a></p>
+</body>
+</html>
