@@ -20,8 +20,25 @@
 <p>前提：共有リポジトリ（origin）からcloneされている</p>
 <p class="command">コマンド：git reset --hard ハッシュ値</p>
 <p></p>
-<p></p>
-<p></p>
 
+<h2>コミットを取り消す</h2>
+<p>前提：共有リポジトリ（origin）からcloneされている</p>
+<p>前提：取り消したいコミットが直近のものである</p>
+<ol>
+<li>「任意のリビジョンに戻す」を実行する</li>
+<li>戻したリビジョンを使って、再度修正を行う</li>
+</ol>
+<p>補足：バージョンツリー上の動き</p>
+<p>1. 以下のCのコミットを取り消したい。</p>
+<p><img src="img/reset1.png" alt="reset1.png" width="20%"></p>
+<p></p>
+<p>2. resetコマンドにてCの直前の状態へ戻す。</p>
+<p><img src="img/reset2.png" alt="reset2.png" width="18%"></p>
+<p></p>
+<p>3. 戻した状態をベースとしてコミットしていけばよい。</p>
+<p><img src="img/reset3.png" alt="reset3.png" width="25%"></p>
+<p></p>
+<p>Cのコミットは誰からも参照されないため、pushで公開する際は「なかったこと」にされる。</p>
+<p>このコミットは「<b>git gc</b>」コマンドにより削除できる。（breisさん曰く、たまに勝手に消される）</p>
 </body>
 </html>
