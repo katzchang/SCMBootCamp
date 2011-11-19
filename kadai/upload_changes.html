@@ -3,24 +3,20 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1038.36">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Kaku Gothic ProN'}
-    span.s1 {font: 12.0px Helvetica}
-  </style>
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />  
+  <title>修正をアップするには？</title>
 </head>
 <body>
-<h1>title</h1>
-<p>修正をアップするには？</p>
-
+<h1>修正をアップするには？</h1>
 <p>作業中のファイルを他の人と共有するには？</p>
-<p>前提：共有リポジトリ（origin）からcloneされている</p>
-<p>コマンド：git xxx xxxxx xxxx</p>
-<p></p>
-<p></p>
-<p></p>
+<p>前提：共有リポジトリ（origin）からcloneされていて、ローカルはmasterブランチで作業している</p>
+
+<p class="command">git add upload_changes.html</p>
+<p>指定したファイルをコミットの対象にする。</p>
+<p class="command">git commit -m "comment."</p>
+<p>addされたファイルをコミットする。</p>
+<p class="command">コマンド：git push origin master</p>
+<p>コミットされたファイルを共有リポジトリに反映する。</p>
 
 </body>
 </html>
